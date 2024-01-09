@@ -1,0 +1,40 @@
+﻿<Page x:Class="ArkanoidGame.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ArkanoidGame"
+      mc:Ignorable="d" 
+      d:Width="1500"
+      Title="GamePage" Background="#212735">
+    <Page.Resources>
+        <Style x:Key="btnStyleWithChange" BasedOn="{StaticResource btnStyleMini}" TargetType="Button">
+            <EventSetter Event="MouseEnter" Handler="Button_MouseEvent"/>
+            <EventSetter Event="MouseLeave" Handler="Button_MouseEvent"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Border CornerRadius="20" Background="#373d49" Height="826" Width="793">
+            <Canvas Name="myCanvas" Height="826" Width="793" VerticalAlignment="Center" Focusable="True" KeyDown="myCanvas_KeyDown" KeyUp="myCanvas_KeyUp" HorizontalAlignment="Center">
+                <Rectangle x:Name="player" Tag="player"  Height="10" Width="150" Fill="#000000" Canvas.Left="360" Canvas.Top="783"/>
+                <Ellipse Tag="ballEclipse" Height="10" Width="10" Fill="White" Canvas.Left="430" Canvas.Top="768"/>
+                <Label x:Name="pointsLabel" HorizontalContentAlignment="Right" Foreground="#F6F7F9" FontSize="50" Content="0" Panel.ZIndex="200" Canvas.Top="5" Canvas.Left="10"/>
+                <TextBlock x:Name="levelTB" Foreground="#F6F7F9" FontSize="20" Text="Level 1" Canvas.Left="360" Canvas.Top="10" HorizontalAlignment="Right" Width="423" TextAlignment="Right" Panel.ZIndex="200"/>
+                
+                <TextBlock x:Name="heartsTextBlock" Text="" Foreground="#F6F7F9" FontSize="26" Panel.ZIndex="200" Canvas.Top="46" Canvas.Left="679" HorizontalAlignment="Left" Height="30" VerticalAlignment="Center" Width="63" TextAlignment="Right"/>
+                <Image  Canvas.Left="750" Canvas.Top="45" Height="33" Width="33" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="200" Source="Images/heart.png" />
+
+                <TextBlock x:Name="powerTextBlock" Text="" Foreground="#F6F7F9" FontSize="16" Panel.ZIndex="200" Canvas.Top="85"  Canvas.Left="551" HorizontalAlignment="Left" Height="30" VerticalAlignment="Center" Width="191" TextAlignment="Right"/>
+                <Image x:Name="powerIcon" Visibility="Collapsed" Canvas.Left="750" Canvas.Top="84.9" Height="24" Width="24" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="200" Source="Images/boost-stronger-hit.png" />
+            </Canvas>
+        </Border>
+        <Button x:Name="btnBack" Style="{DynamicResource btnStyleWithChange}" Click="Back_Click" Margin="10,20" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Image Source="Images/button-left-arrow-violet.png"/>
+        </Button>
+        <Button x:Name="btnPause" Style="{DynamicResource btnStyleWithChange}" Click="Pause_Click" Margin="80,20,10,20" Height="50" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Image Source="Images/button-pause-violet.png"/>
+        </Button>
+        <Image Source="Images/points-8blocks.png" Margin="0,107,1162,48" />
+        <Image Source="Images/points-2blocks.png" Margin="1176,310,28,329"/>
+    </Grid>
+</Page>

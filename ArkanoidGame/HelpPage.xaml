@@ -1,0 +1,26 @@
+﻿<Page x:Class="ArkanoidGame.HelpPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArkanoidGame"
+        mc:Ignorable="d"
+        Title="HelpPage" Height="800" Width="1200" Margin="0,0,0,100">
+    <Grid>
+        <TextBlock Text="GAME RULES" FontSize="30" TextAlignment="Center" Foreground="#FFF6F7F9"/>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="648">
+            <TextBlock Text="1) The goal of the game is to complete 9 levels and 1 special." FontSize="30" TextAlignment="Left" Foreground="#FFF6F7F9"/>
+            <TextBlock Text="2) You can move using the A and D keys on your keyboard." FontSize="30" TextAlignment="Left" Foreground="#FFF6F7F9"/>
+            <TextBlock Text="3) Press space bar to shoot the ball." FontSize="30" TextAlignment="Left" Foreground="#FFF6F7F9"/>
+            <TextBlock Text="4) There are 8 types of blocks in the game with points from 50 to 120:" FontSize="30" TextAlignment="Left" Foreground="#FFF6F7F9"/>
+            <Image Source="Images/8-blocks.png"/>
+            <TextBlock Text="5) There are also 2 special blocks: 1 - 50 points, but needs 2 hits:" FontSize="30" TextAlignment="Left" Foreground="#FFF6F7F9"/>
+            <Image Source="Images/2hit-block.png" Width="100" HorizontalAlignment="Left" Margin="100,0,0,0"/>
+            <TextBlock Text="    2 - can't be broken:" FontSize="30" TextAlignment="Left" Foreground="#FFF6F7F9"/>
+            <Image Source="Images/golden-block.png" Width="100" HorizontalAlignment="Left" Margin="100,20,0,0"/>
+        </StackPanel>
+        
+        <Button Content="Back" Click="Back_Click" Style="{StaticResource btnStyle}" Width="120" Height="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,120"/>
+    </Grid>
+</Page>
