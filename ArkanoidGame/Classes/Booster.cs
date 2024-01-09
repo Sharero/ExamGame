@@ -57,7 +57,7 @@ namespace ArkanoidGame
 
         public void RandomPower(int number = 5)
         {
-            switch (Tools.RundomNumber(1, number))
+            switch (Tools.RundomNumber(1, 3))
             {
                 case 1:
                     _power = Power.PlayerLenght;
