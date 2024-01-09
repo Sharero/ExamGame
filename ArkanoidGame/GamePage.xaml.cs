@@ -794,14 +794,14 @@ namespace ArkanoidGame
                 gameTimer.Stop();
                 gamePlay = false;
                 myCanvas.Focus();
-                img.Source = new BitmapImage(new Uri("Images/play-white.png", UriKind.Relative));
+                img.Source = new BitmapImage(new Uri("Images/button-play-white.png", UriKind.Relative));
             }
             else
             {
                 gameTimer.Start();
                 gamePlay = true;
                 myCanvas.Focus();
-                img.Source = new BitmapImage(new Uri("Images/pause-white.png", UriKind.Relative));
+                img.Source = new BitmapImage(new Uri("Images/button-pause-white.png", UriKind.Relative));
             }
         }
         private void Shooting(object sender, EventArgs e) // когда бустер шутинг
